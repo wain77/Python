@@ -108,3 +108,4 @@ twilio*/
 
 # Other stuff
 *.png
+.vscode/settings.json
