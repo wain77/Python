@@ -21,7 +21,7 @@ def SieveOfEratosthenes(n):
     else:
         print('')
 
-if __name__ == '__main__':
+def main():
     print('Welcome to the Sieve of Eratosthenese!')
     print('This program prints out all the prime numbers below a number set by you.')
     
@@ -46,3 +46,5 @@ if __name__ == '__main__':
                     break
                 elif again == 'y':
                     break
+
+main()
