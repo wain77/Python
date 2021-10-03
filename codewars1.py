@@ -53,11 +53,27 @@
 
 # print(high('man i need a taxi up to ubud'))
 
-def expanded_form(num):
-    digits = [int(d) for d in str(num)]
-    numDigits = len(digits)
-    for i in range(numDigits):
-        digits[i] = digits[i] * (10 ** (numDigits - i - 1))
-    return ' + '.join([str(digit) for digit in digits])
+# def expanded_form(num):
+#     return ' + '.join([str(digit) for digit in [(int(d) * (10 ** (len(str(num)) - str(num).index(d)))) for d in str(num)] if digit != 0])
 
-print(expanded_form(42))
+# print(expanded_form(70302))
+
+def isOverlapping(list1, list2):
+    if list2[0] < list1[1]:
+        return True
+    else:
+        return False
+
+def buildIntervalList(initIntervals):
+    truthyList = [isOverlapping(initIntervals[i-1], initIntervals[i]) for i in range(1,len(initIntervals))]
+        
+
+def sum_of_intervals(intervals):
+    intervals = sorted([list(x) for x in intervals])
+    for i in range(1,len(intervals)):
+        if 
+    return sum([j[1] - j[0] for j in intervals])
+
+print(sum_of_intervals([
+   (1,4), (3,5)
+]))
