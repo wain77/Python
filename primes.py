@@ -10,4 +10,5 @@ for possiblePrime in range(2,upperLimit):
 	if isPrime:
 		primes.append(possiblePrime)
 
+print(primes)
 print(len(primes))

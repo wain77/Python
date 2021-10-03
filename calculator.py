@@ -20,9 +20,12 @@ def multiplication(num1, num2):
 def division(num1, num2):
     return num1 / num2
 
+def power(num1, num2):
+    return num1 ** num2
+
 if __name__ == "__main__":
     again = 'y'
-    operators = ['+','-','*','/']
+    operators = ['+','-','*','/','^']
 
     while again == 'y':
         clear()
@@ -30,8 +33,11 @@ if __name__ == "__main__":
         op = ''
         num1 = int(input('Please enter the first number: '))
         while op not in set(operators):
-            op = input('Please choose your operator (+, -, *, /): ')
-        num2 = int(input('Please enter the second number: '))
+            op = input('Please choose your operator (+, -, *, /, ^): ')
+        if op != '^':
+            num2 = int(input('Please enter the second number: '))
+        else:
+            num2 = int(input('Please enter the power: '))
 
         if op == '+':
             print('Result:', addition(num1, num2))
@@ -41,6 +47,8 @@ if __name__ == "__main__":
             print('Result:', multiplication(num1, num2))
         if op == '/':
             print('Result:', division(num1, num2))
+        if op == '^':
+            print('Result:', power(num1, num2))
         
         again = input('Perform another calculation? (y/n) ')
     

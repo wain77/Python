@@ -1,1 +1,10 @@
-for x in range(101):print("FizzBuzz") if x%15==0 else print("Buzz") if x%5==0 else print("Fizz") if x%3==0 else print(x)
+steps = 100
+fizz = 5
+buzz = 3
+
+for x in range(steps + 1):
+    output = ''
+    if x % fizz == 0: output += "Fizz"
+    if x % buzz == 0: output += "Buzz"
+    if output == '': output = x
+    print(output)
